@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Wahahahah</h1>
+    <p>{{myvalue}}</p>
+    <p>{{myresult}}</p>
+    <ul>
+        {%for item in mylist%}
+        <li {% if item == 5 %}style='color: red'{%endif%}>{{item}}</li>
+        {%endfor%}
+    </ul>
+{% endblock %}
