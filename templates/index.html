@@ -2,12 +2,10 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1>Wahahahah</h1>
-    <p>{{myvalue}}</p>
-    <p>{{myresult}}</p>
-    <ul>
-        {%for item in mylist%}
-        <li {% if item == 5 %}style='color: red'{%endif%}>{{item}}</li>
-        {%endfor%}
-    </ul>
+    <h1>Hello World</h1>
+    <form method="POST" action="{{url_for('index')}}">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="Login">
+    </form>
 {% endblock %}
